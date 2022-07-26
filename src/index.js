@@ -18,5 +18,5 @@ function validadorCard (){
     document.getElementById("numDigitado").value = ""
 
 }
-let runBotao = document.getElementById("botao")
+let runBotao = document.getElementById("buttonValidator")
 runBotao.addEventListener("click", validadorCard)

@@ -33,7 +33,6 @@ h2 {
     font-size: medium;
     text-align:left;
     color: black;
-
 }
 
 .credNumber {
@@ -41,7 +40,6 @@ h2 {
     font-size: medium;
     text-align:left;
     color: black;
-
 }
 
 .vencDate {
@@ -49,7 +47,6 @@ h2 {
     font-size: medium;
     text-align:left;
     color: black;
-
 }
 
 .codSecure {
@@ -63,7 +60,12 @@ h2 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: block;
     color: black;
-    background-color: rgb(212, 189, 189);
-    
-    
+    background-color: rgb(212, 189, 189);    
+}
+
+.numCalc{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+    text-align:left;
+    color: black;
 }
