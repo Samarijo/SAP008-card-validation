@@ -1,41 +1,65 @@
-const validator = {
-  isValid:
-  function (logicaString){
-    let cardNumb = logicaString.split("").reverse()
-    let sumFinal = 0;
 
-    for (let i=0; i < cardNumb.length;i++) { 
-      let num = parseInt(cardNumb[i])
-      if ((i % 2 !== 0) && (num>=5)){
-        sumFinal = sumFinal + ((num*2)-9);
-      }
-      else if ((i % 2 !== 0) && (num<=5)) {
-        sumFinal = sumFinal + (num *2);
-      }
-      else {
-        sumFinal = sumFinal + (num);
-      }
+const validator = { isValid }
+
+function isValid(creditCardNumber) {
+  const transfCard = creditCardNumber.split("").reverse();
+  
+  let retCard = 0;
+
+  for (let i = 0; i < transfCard.length; i++) {
+    let numCard = parseInt(transfCard[i])
+
+    if (i % 2 !== 0 && numCard >= 5) {
+      retCard = retCard + (numCard * 2) - 9;
+      console.log("1")
     }
-    if (sumFinal % 10  === 0){
-      return true
+    else if (i % 2 !== 0 && numCard <= 5) {
+      retCard = retCard + (numCard * 2);
+      console.log("2")
     }
     else {
-      return false
+      retCard = retCard + numCard;
+      console.log("3")
     }
+  }
 
-  },
-  maskify: function (mascararNum) {
-    const ultimosQuatroNum = 4
-    let mascarar = ""
-    for (let i = 0; i < mascararNum.length; i++) {
-      if (i >= ((mascararNum.length) - ultimosQuatroNum)) {
-        mascarar = mascarar + mascararNum.charAt(i)
-      }
-      else {
-        mascarar = mascarar + "#"
-      }
-    }
-    return mascarar
+  if (retCard % 10 === 0) {
+    return true
+  }
+  else {
+    return false
   }
 }
+
+/*
+let newNumCard = creditCardNumber * 2;
+let numBol = false;
+ 
+if (newNumCard == 4) {
+  numBol = true;
+}
+else {
+  numBol = false;
+}
+return numBol
+*/
+
+/*
+function checkLuhn(string purportedCC) {
+    int nDigits := length(purportedCC)
+    int sum := 0;
+    int parity := (nDigits-2)modulus 2 
+    for i from 0 to nDigits - 1 {
+        int digit := integer(purportedCC[i])
+        if i modulus 2 = parity 
+            digit := digit × 2 
+        if digit > 9 
+            digit := digit - 9 
+        sum := sum + digit 
+    }
+    return (sum modulus 10) = 0 
+}
+*/
+
+
 export default validator;

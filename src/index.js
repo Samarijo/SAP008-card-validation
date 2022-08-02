@@ -1,22 +1,23 @@
 import validator from './validator.js';
-function validadorCard (){
-    let cardNumb = document.getElementById("numDigitado").value
-    let resultFinal = validator.isValid(cardNumb)
-    console.log(resultFinal)
-    let mascarar = validator.maskify(cardNumb)
-    let resultmask = document.getElementById("numMask")
-    
-    if (cardNumb === ""){
-        return resultmask.textContent = " ENTER A NUMBER"
+
+let btnCard = document.querySelector("#buttonValidator");
+let respCard = document.querySelector("#numMask");
+
+btnCard.addEventListener('click', validadorCard);
+
+function validadorCard() {
+    let numCard = document.querySelector("#numDigitado").value;
+    let resultadoFinal = validator.isValid(numCard);
+
+    if (numCard === "") {
+        return respCard.innerText = " INSIRA UM NÚMERO";
     }
-    if (resultFinal) {
-        resultmask.textContent = mascarar + " VALID CARD" 
+    else if (resultadoFinal == true) {
+        respCard.innerText = numCard + " CARTÃO VÁLIDO";
+        console.log(resultadoFinal)
     }
     else {
-        resultmask.textContent = mascarar + " INVALID CARD"
+        respCard.innerText = numCard + " CARTÃO INVÁLIDO";
+        console.log(resultadoFinal)
     }
-    document.getElementById("numDigitado").value = ""
-
 }
-let runBotao = document.getElementById("buttonValidator")
-runBotao.addEventListener("click", validadorCard)
