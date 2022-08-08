@@ -1,9 +1,8 @@
-
-const validator = { isValid }
-
-function isValid(creditCardNumber) {
+const validator = {
+isValid: 
+function (creditCardNumber) {
   const transfCard = creditCardNumber.split("").reverse();
-  
+
   let retCard = 0;
 
   for (let i = 0; i < transfCard.length; i++) {
@@ -29,37 +28,21 @@ function isValid(creditCardNumber) {
   else {
     return false
   }
-}
-
-/*
-let newNumCard = creditCardNumber * 2;
-let numBol = false;
- 
-if (newNumCard == 4) {
-  numBol = true;
-}
-else {
-  numBol = false;
-}
-return numBol
-*/
-
-/*
-function checkLuhn(string purportedCC) {
-    int nDigits := length(purportedCC)
-    int sum := 0;
-    int parity := (nDigits-2)modulus 2 
-    for i from 0 to nDigits - 1 {
-        int digit := integer(purportedCC[i])
-        if i modulus 2 = parity 
-            digit := digit × 2 
-        if digit > 9 
-            digit := digit - 9 
-        sum := sum + digit 
+},
+maskify:
+function (mascararNum) {
+  const ultimosQuatroNum = 4
+  let mascarar = ""
+  for (let i = 0; i < mascararNum.length; i++) {
+    if (i >= ((mascararNum.length) - ultimosQuatroNum)) {
+      mascarar = mascarar + mascararNum.charAt(i)
     }
-    return (sum modulus 10) = 0 
+    else {
+      mascarar = mascarar + "#"
+    }
+  }
+  return mascarar
 }
-*/
-
+}
 
 export default validator;
