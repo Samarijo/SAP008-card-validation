@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>card-validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Editar forma de pagamento</h1>
+      <h2>Digite suas informações</h2>
+    </header>
+    
+    <main>
+      <div class="personalData">
+        <form> 
+          <label class="titularName">Nome do titular:</label>
+          <input class="titularName" type="text" name="Name" id="Name">
+          <br>
+          <br>
+
+          <label class="credNumber">Número do cartão:</label>
+          <input class="credNumber" type="text" maxlength="16" placeholder="XXXX-XXXX-XXXX-XXXX" id="numDigitado">
+          <p id="numMask" class="numCalc"></p>
+          <br>
+          <br>
+
+          <label class="vencDate">Data de vencimento:</label>
+          <input class="vencDate" type="text" placeholder="MM/AAAA">
+
+          <label class="codSecure">Código de segurança:</label>
+          <input class="codSecure" type="text" placeholder="XXX">
+          <br>
+          <br>
+         
+          <button class="buttonValidator"  type="button" id="buttonValidator"> SALVAR ALTERAÇÕES </button>
+        </form>
+      </div>
+    </main>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
