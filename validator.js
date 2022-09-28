@@ -10,15 +10,15 @@ function (creditCardNumber) {
 
     if (i % 2 !== 0 && numCard >= 5) {
       retCard = retCard + (numCard * 2) - 9;
-      console.log("1")
+      
     }
     else if (i % 2 !== 0 && numCard <= 5) {
       retCard = retCard + (numCard * 2);
-      console.log("2")
+      
     }
     else {
       retCard = retCard + numCard;
-      console.log("3")
+      
     }
   }
 
