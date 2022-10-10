@@ -7,17 +7,10 @@ body {
 }
 
 .personalData {
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
     text-align: left;
-    border: solid;
-    border-radius: 30px;
-    padding: 15px;
+    border-style: solid;
     width: fit-content;
     height: fit-content;
-    background-color: rgb(217 217 217);
 
 }
 
@@ -61,16 +54,13 @@ h2 {
     font-size: medium;
     text-align:left;
     color: black;
-    
 }
 
 .buttonValidator {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: block;
     color: black;
-    background-color: rgb(212, 189, 189);
-    display: block;
-    margin: 0 auto;    
+    background-color: rgb(212, 189, 189);    
 }
 
 .numCalc{
